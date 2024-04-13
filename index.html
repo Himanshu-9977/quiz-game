@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ APP</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>    
+<link href="src/output.css" rel="stylesheet">
+<link rel="stylesheet" href="src/input.css">
+  </head>
+  <body class="w-full h-full">
+    <main class="w-full relative h-screen">
+      <div class="game hidden bg-zinc-100 py-8 absolute w-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-screen">
+        <h1 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold">Quiz Game 🧠</h1>
+        <div class="question-cont mx-2 flex items-center gap-4 mt-10 lg:mt-14">
+          <h2 class="qno text-2xl md:text-3xl lg:text-[2rem] font-bold text-black"></h2>
+          <h2 class="question text-[1.4rem] md:text-[1.6rem] lg:text-[2rem] font-bold text-black/70"></h2>
+        </div>
+        <div class="options mb-8 w-full flex flex-col gap-4 mt-12"></div>
+        <div class="flex ml-4 items-center">
+          <h4 class="bg-zinc-20 text-[1.2rem] md:text-[1.6rem] font-semibold  px-4 py-2 rounded-[100rem]">Score -></h4>
+          <h4 class="score bg-zinc-200 text-[1.2rem] md:text-[1.6rem] h-10 w-10 flex items-center justify-center font-semibold px-4 py-2 rounded-full">9</h4>
+        </div>
+      </div>
+      <div class="intro w-full h-screen p-5">
+        <h1 class="intro-elem text-xl md:text-2xl lg:text-3xl text-center font-semibold">Hello World!!!</h1>
+        <h1 class="intro-elem text-2xl md:text-3xl lg:text-4xl text-center font-bold">Ready for the Quiz Test ?</h1>
+        <div
+          class="rules intro-elem rounded mb-4 mt-4 h-[65%] px-4 bg-green-100 overflow-y-scroll md:mt-12"
+        >
+          <div class="intro-elem">
+            <h2 class="text-xl md:text-2xl font-semibold text-green-900">How to Play:</h2>
+            <ul class="list-disc md:text-[1.4rem]">
+              <li>
+              Start the Quiz: Click the 'Start' button on this screen to begin your
+              quiz journey. The quiz will contain random questions related to
+              <strong class="text-red-900">'NEPAL'</strong>.
+              </li>
+              <li>
+                Answer Questions: Each question will appear one at a time. You'll have
+                four options to choose from. Click on the option you think is correct.
+              </li>
+              <li>
+                Scoring: Each correct answer earns you one point. There are no
+                penalties for wrong answers, so guess if you're unsure!
+              </li>
+              <li>
+                Progress: Your current question number and total score will be
+                displayed as you progress through the quiz.
+              </li>
+              <li>
+                End of Quiz: The game concludes when you have answered all questions.
+                Your final score will be displayed.
+              </li>
+            </ul>
+          </div>
+          <div class="intro-elem">
+            
+          <h2 class="text-xl md:text-2xl mt-4 mb-2 font-semibold text-green-900">
+            Additional Rules:
+          </h2>
+          <ul class="list-disc md:text-[1.4rem]">
+            <li>
+              Timing: There is no time limit per question, but the total time taken
+              to complete the quiz will be recorded. Try to answer as quickly as
+              possible!
+            </li>
+            <li>
+              Review: Once answered, questions cannot be revisited during the same
+              session. Make sure you're confident in your choice before moving on!
+            </li>
+            <li>
+              Randomness: Questions are presented in a random order each time the
+              quiz is started to provide a unique challenge.
+            </li>
+          </ul>
+          </div>
+          <div class="intro-elem mb-4">
+            
+          <h2 class="text-xl md:text-2xl mt-4 mb-2 font-semibold text-green-900">
+            Tips for success:
+          </h2>
+          <ul class="list-disc md:text-[1.4rem]">
+            <li>
+              Take your time to think through each question. Although speed is a
+              factor, accuracy is more crucial.
+            </li>
+            <li>
+              Familiarize yourself with a wide range of topics to better prepare for
+              the diverse questions in the quiz.
+            </li>
+            <li>
+              Enjoy the process! This is a great opportunity to test your knowledge
+              and learn something new.
+            </li>
+            <li>Start your Quiz Adventure Now and Aim for the Top Score!</li>
+          </ul>
+          </div>
+        </div>
+        <h4
+          class="intro-elem cursor-pointer start-btn text-xl md:text-2xl lg:text-3xl bg-green-500 inline py-2 px-4 rounded-[100rem] -translate-x-1/2 absolute left-1/2"
+        >
+          Start Quiz
+        </h4>
+      </div>
+  
+      <div class="completed hidden w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
+        <h2 class="text-[2.2rem] md:text-[2.8rem] lg:text-[3.5rem] border-b-2 border-b-black font-semibold">Quiz Ended.</h2>
+        <div class="mt-4 gap-2 flex">
+          <h2 class="text-[2.6rem] md:text-[3.5rem] lg:text-[4.8rem] font-semibold">Final Score -></h2>
+          <h2 class="r-score text-[2.6rem] md:text-[3.5rem] lg:text-[4.8rem] font-bold underline text-green-800">6</h2>
+        </div>
+        <h2 class="restart mt-6 cursor-pointer md:text-xl lg:text-3xl bg-green-500 px-4 py-2 rounded-[100rem] text-lg">Play Again</h2>
+      </div>
+  
+      <div class="intro-elem absolute border-b-2 border-b-black/30 z-[999] bottom-[2%] flex items-center gap-2 right-[4%]">
+        <i class="intro-elem text-black/80 text-md md:text-lg lg:text-xl ri-copyright-line"></i>
+        <h3 class="intro-elem text-md md:text-lg lg:text-xl">Developed by Himanshu Bhatta</h3>
+      </div>
+    </main>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
